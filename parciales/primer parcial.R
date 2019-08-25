@@ -2,12 +2,12 @@
 #                                                   Primer Parcial Analisis numerico
 #-------------------------------------------------------------------------------------------------------
 
-# 1. Sea f(n) la eficiencia del algoritmo, medida como el n磚mero m磇nimo de operaciones requeridas para
+# 1. Sea f(n) la eficiencia del algoritmo, medida como el n麓umero m麓inimo de operaciones requeridas para
 #resolver el problema
 
-# a) Implemente en R o Python un algoritmo que le permita sumar 磚nicamente los elementos de la
+# a) Implemente en R o Python un algoritmo que le permita sumar 麓unicamente los elementos de la
 # sub matriz triangular superior o triangular inferior, dada la matriz cuadrada An. Imprima varias
-# pruebas, para diferentes valores de n y exprese f(n) en notaci磑n O() con una gr碼fica que muestre
+# pruebas, para diferentes valores de n y exprese f(n) en notaci麓on O() con una gr麓afica que muestre
 # su orden de convergencia.
 
 crearMatrix = function(n)
@@ -55,7 +55,7 @@ sumarElementosMatriz = function(tamMatrices)
     
   }
   
-  plot(eje_x, eje_y, main = "funcion O(n)", col="blue", xlab = "Tama駉 matriz", ylab = "Iteraciones", type = "o", ylim = c(0,n*n) )
+  plot(eje_x, eje_y, main = "funcion O(n)", col="blue", xlab = "Tama帽o matriz", ylab = "Iteraciones", type = "o", ylim = c(0,n*n) )
   
 }
 
@@ -73,14 +73,14 @@ g <-function(x){
   return(sin(x))
 }
 
-#intersecci髇
+#intersecci贸n
 h <-function(x){
   return (f(x)-g(x))  
 }
 
-# a)  Utilice la siguiente formula recursiva con E = 1e???8 para el punto de intersecci髇.
+# a)  Utilice la siguiente formula recursiva con E = 1e???8 para el punto de intersecci贸n.
 
-# El primer y segundo par醡etro son aproximaciones de la soluci髇
+# El primer y segundo par谩metro son aproximaciones de la soluci贸n
 # Respectivamente corresponden a los valores iniciales de x(n-1) y x(n-2) 
 
 formula <- function(x0, x1, tol)
@@ -93,7 +93,7 @@ formula <- function(x0, x1, tol)
   abline(h=0, v=0, col="black")
   par(new=FALSE)
   
-  plot(h, xlim = c(-3,0), ylim = c(-2,2), col = "red", main = "Grafica de la Funci髇 (resta)", xlab = "x", ylab = "y")
+  plot(h, xlim = c(-3,0), ylim = c(-2,2), col = "red", main = "Grafica de la Funci贸n (resta)", xlab = "x", ylab = "y")
   abline(h=0, v=0, col="black")
   
   err = abs(x1-x0)
@@ -150,7 +150,7 @@ formula <- function(x0, x1, tol)
   plot(f, xlim = c(0,iteraciones[contador]), ylim = c(min(Erx),max(Erx)), col = "white", main = "Iteraciones vs Errores", sub = "Newton", xlab = "Iteraciones", ylab = "Errores")
   lines(iteraciones, Erx, type = "l")
   
-  cat("\n\nLa intersecci髇 se encuentra en el punto x=", x, ", E=",err ," iteraciones = ", contador ,"\n")
+  cat("\n\nLa intersecci贸n se encuentra en el punto x=", x, ", E=",err ," iteraciones = ", contador ,"\n")
 }
 
 #Advertencia: Los valores iniciales deben ser cercanos a la solucion para que haya convergencia
