@@ -71,11 +71,11 @@ radioEspectralJacobi<-function(A,B)
   print(B)
   
   x0 = rep(c(1), sqrt(length(A)))
-  
+
   X = itersolve(A, B, x0, tol = 1e-8, method = "Jacobi")
-  cat("\nSolución por Jacobi:\n\n")
+  cat("\nSoluciÃ³n por Jacobi:\n\n")
   print(X$x)
-  
+
 }
 
 radioEspectralGauss<-function(A,B)
@@ -101,7 +101,7 @@ radioEspectralGauss<-function(A,B)
   x0 = rep(c(1), sqrt(length(A)))
   
   X = itersolve(A, B, x0, tol = 1e-8, method = "Gauss-Seidel")
-  cat("\nSolución por Gauss Seidel:\n\n")
+  cat("\nSoluciÃ³n por Gauss Seidel:\n\n")
   print(X$x)
   
 }
@@ -133,7 +133,7 @@ radioEspectralSOR<-function(A,B, w)
   x0 = rep(c(1), sqrt(length(A)))
   
   X = itersolve(A, B, x0, tol = 1e-8, method = "Richardson")
-  cat("\nSolución por SOR:\n\n")
+  cat("\nSoluciÃ³n por SOR:\n\n")
   print(X$x)
 }
 
